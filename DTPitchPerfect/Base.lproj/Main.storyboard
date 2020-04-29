@@ -11,12 +11,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="DTPitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Wr-bg4">
-                                <rect key="frame" x="129.5" y="370.5" width="155" height="155"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Wr-bg4">
+                                <rect key="frame" x="129.5" y="326" width="155" height="155"/>
                                 <state key="normal" image="RecordButton">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -30,10 +30,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlF-U0-biG">
-                                <rect key="frame" x="175" y="584" width="64" height="64"/>
+                                <rect key="frame" x="172.5" y="501" width="69" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="IJO-pa-bg5"/>
-                                    <constraint firstAttribute="width" constant="64" id="yba-XA-RCV"/>
+                                    <constraint firstAttribute="width" constant="69" id="BFP-GV-3YF"/>
+                                    <constraint firstAttribute="height" constant="69" id="aju-vQ-Ncw"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
                                 <userDefinedRuntimeAttributes>
@@ -45,34 +45,19 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xGR-Cg-qJi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpB-Xh-v6a">
-                                <rect key="frame" x="104" y="544" width="206" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="XpB-Xh-v6a" firstAttribute="top" secondItem="qMT-Wr-bg4" secondAttribute="bottom" constant="18.5" id="2BO-1k-XcM"/>
-                            <constraint firstItem="XpB-Xh-v6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="2Fu-Xx-1Dt"/>
-                            <constraint firstItem="qMT-Wr-bg4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FlD-Uf-gzd"/>
-                            <constraint firstItem="qMT-Wr-bg4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KEr-ct-a53"/>
-                            <constraint firstItem="XpB-Xh-v6a" firstAttribute="centerX" secondItem="qMT-Wr-bg4" secondAttribute="centerX" id="WKM-WO-0w5"/>
-                            <constraint firstItem="KlF-U0-biG" firstAttribute="top" secondItem="XpB-Xh-v6a" secondAttribute="bottom" constant="19" id="hHp-g9-lyM"/>
-                            <constraint firstItem="XpB-Xh-v6a" firstAttribute="centerX" secondItem="KlF-U0-biG" secondAttribute="centerX" id="mAx-kw-LGp"/>
+                            <constraint firstItem="KlF-U0-biG" firstAttribute="centerX" secondItem="qMT-Wr-bg4" secondAttribute="centerX" id="CVC-1Q-zQZ"/>
+                            <constraint firstItem="KlF-U0-biG" firstAttribute="top" secondItem="qMT-Wr-bg4" secondAttribute="bottom" constant="20" id="FEL-cc-vVv"/>
+                            <constraint firstItem="qMT-Wr-bg4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="238" id="MMY-wc-xds"/>
+                            <constraint firstItem="qMT-Wr-bg4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lHe-ff-mUl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="OQg-9I-ryO"/>
                     <connections>
                         <outlet property="recordButton" destination="qMT-Wr-bg4" id="xWq-ad-7jA"/>
-                        <outlet property="recordingLabel" destination="XpB-Xh-v6a" id="2Y8-rv-2Kp"/>
                         <outlet property="stopRecordingButton" destination="KlF-U0-biG" id="9q8-uY-VZV"/>
                         <segue destination="Bm8-B6-bKo" kind="show" identifier="stopRecording" id="Xbk-LQ-9q7"/>
                     </connections>
@@ -166,8 +151,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvs-dK-J2K" userLabel="Stop Button">
-                                <rect key="frame" x="174.5" y="773.5" width="65" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvs-dK-J2K" userLabel="Stop Button">
+                                <rect key="frame" x="175" y="782" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="DcN-oW-nA7"/>
                                     <constraint firstAttribute="width" constant="64" id="aS3-fS-qCe"/>
